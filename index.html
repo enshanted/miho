@@ -5,27 +5,23 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Butchoi</title>
-
 <style>
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
 body {
     font-family: Arial, Helvetica, sans-serif;
     overflow: hidden;
     min-height: 100vh;
 }
-
 /* =========================
    BACKGROUND
 ========================= */
 .page {
     width: 100%;
     height: 100vh;
-    height: 100dvh;
     position: relative;
     overflow: hidden;
     background:
@@ -37,7 +33,6 @@ body {
             #f5c56b 100%
         );
 }
-
 /* =========================
    SUN
 ========================= */
@@ -55,7 +50,6 @@ body {
         0 0 130px rgba(255, 230, 100, 0.7);
     animation: sunPulse 4s ease-in-out infinite;
 }
-
 @keyframes sunPulse {
     0%, 100% {
         transform: scale(1);
@@ -63,7 +57,6 @@ body {
             0 0 30px #fff1a8,
             0 0 70px #ffe98a;
     }
-
     50% {
         transform: scale(1.08);
         box-shadow:
@@ -71,7 +64,6 @@ body {
             0 0 100px #ffe98a;
     }
 }
-
 /* =========================
    CLOUDS
 ========================= */
@@ -83,7 +75,6 @@ body {
     border-radius: 100px;
     animation: cloudMove linear infinite;
 }
-
 .cloud::before,
 .cloud::after {
     content: "";
@@ -91,27 +82,23 @@ body {
     background: rgba(255,255,255,0.75);
     border-radius: 50%;
 }
-
 .cloud::before {
     width: 60px;
     height: 60px;
     left: 25px;
     bottom: 10px;
 }
-
 .cloud::after {
     width: 75px;
     height: 75px;
     right: 20px;
     bottom: 5px;
 }
-
 .cloud1 {
     top: 15%;
     left: -180px;
     animation-duration: 35s;
 }
-
 .cloud2 {
     top: 30%;
     left: -200px;
@@ -119,17 +106,14 @@ body {
     animation-duration: 45s;
     animation-delay: 5s;
 }
-
 @keyframes cloudMove {
     from {
         left: -220px;
     }
-
     to {
         left: 110%;
     }
 }
-
 /* =========================
    START SCREEN
 ========================= */
@@ -148,35 +132,29 @@ body {
         opacity 1s ease,
         visibility 1s ease;
 }
-
 .start-screen.hide {
     opacity: 0;
     visibility: hidden;
 }
-
 .start-screen h1 {
     color: #FFA500;
     font-size: clamp(28px, 7vw, 55px);
     margin-bottom: 15px;
     animation: titleFloat 3s ease-in-out infinite;
 }
-
 .start-screen p {
     color: #8c5c16;
     font-size: 17px;
     margin-bottom: 30px;
 }
-
 @keyframes titleFloat {
     0%, 100% {
         transform: translateY(0);
     }
-
     50% {
         transform: translateY(-8px);
     }
 }
-
 /* =========================
    START BUTTON
 ========================= */
@@ -194,7 +172,6 @@ body {
         0 15px 30px rgba(110, 70, 0, 0.25);
     transition: 0.2s;
 }
-
 .start-button:hover {
     transform:
         translateY(-4px)
@@ -203,14 +180,12 @@ body {
         0 12px 0 #c57e00,
         0 20px 35px rgba(110, 70, 0, 0.3);
 }
-
 .start-button:active {
     transform: translateY(4px);
     box-shadow:
         0 3px 0 #c57e00,
         0 7px 15px rgba(110, 70, 0, 0.2);
 }
-
 /* =========================
    MAIN CONTENT
 ========================= */
@@ -221,14 +196,12 @@ body {
     visibility: hidden;
     transition: opacity 1s ease;
 }
-
 .main-content.show {
     opacity: 1;
     visibility: visible;
 }
-
 /* =========================
-   TOP MESSAGE
+   TOP
 ========================= */
 .top-message {
     position: absolute;
@@ -247,35 +220,25 @@ body {
         0 10px 30px rgba(80, 50, 0, 0.15);
     animation: messageAppear 1.5s ease forwards;
 }
-
 .top-message h2 {
     font-size: clamp(16px, 3vw, 27px);
     line-height: 1.4;
     font-weight: normal;
 }
-
 .top-message h2 .bold-title {
     font-weight: 900 !important;
     display: inline;
 }
-
-.song-title {
-    font-weight: 900 !important;
-    color: #704300;
-}
-
 @keyframes messageAppear {
     from {
         opacity: 0;
         transform: translate(-50%, -30px);
     }
-
     to {
         opacity: 1;
         transform: translate(-50%, 0);
     }
 }
-
 /* =========================
    SUNFLOWER NI LUMIJO
 ========================= */
@@ -287,9 +250,7 @@ body {
     height: 600px;
     transform: translateX(-50%);
     z-index: 10;
-    pointer-events: none;
 }
-
 /* =========================
    STEM
 ========================= */
@@ -316,21 +277,18 @@ body {
     animation:
         growStem 5s ease-out 0.5s forwards;
 }
-
 @keyframes growStem {
     0% {
         transform:
             translateX(-50%)
             scaleY(0);
     }
-
     100% {
         transform:
             translateX(-50%)
             scaleY(1);
     }
 }
-
 /* =========================
    LEAF
 ========================= */
@@ -366,7 +324,6 @@ body {
         ease-in-out
         8s infinite;
 }
-
 .leaf::after {
     content: "";
     position: absolute;
@@ -378,7 +335,6 @@ body {
     border-radius: 10px;
     transform: rotate(-4deg);
 }
-
 @keyframes leafGrow {
     0% {
         opacity: 0;
@@ -386,14 +342,12 @@ body {
             rotate(-18deg)
             scale(0);
     }
-
     70% {
         opacity: 1;
         transform:
             rotate(-12deg)
             scale(1.08);
     }
-
     100% {
         opacity: 1;
         transform:
@@ -401,33 +355,28 @@ body {
             scale(1);
     }
 }
-
 @keyframes leafWave {
     0%, 100% {
         transform:
             rotate(-18deg)
             scale(1);
     }
-
     25% {
         transform:
             rotate(-12deg)
             scale(1.02);
     }
-
     50% {
         transform:
             rotate(-21deg)
             scale(1.04);
     }
-
     75% {
         transform:
             rotate(-14deg)
             scale(1.02);
     }
 }
-
 /* =========================
    FLOWER HEAD
 ========================= */
@@ -449,7 +398,6 @@ body {
         ease-in-out
         9s infinite;
 }
-
 @keyframes flowerBloom {
     0% {
         transform:
@@ -457,14 +405,12 @@ body {
             scale(0)
             rotate(-15deg);
     }
-
     60% {
         transform:
             translateX(-50%)
             scale(1.15)
             rotate(5deg);
     }
-
     100% {
         transform:
             translateX(-50%)
@@ -472,29 +418,24 @@ body {
             rotate(0deg);
     }
 }
-
 @keyframes flowerSway {
     0%, 100% {
         margin-left: 0;
         rotate: -2deg;
     }
-
     25% {
         margin-left: -8px;
         rotate: 3deg;
     }
-
     50% {
         margin-left: 5px;
         rotate: -3deg;
     }
-
     75% {
         margin-left: -5px;
         rotate: 2deg;
     }
 }
-
 /* =========================
    SUNFLOWER PETALS
 ========================= */
@@ -533,7 +474,6 @@ body {
         var(--delay)
         forwards;
 }
-
 .petal::after {
     content: "";
     position: absolute;
@@ -551,7 +491,6 @@ body {
     border-radius: 50%;
     opacity: 0.7;
 }
-
 /* =========================
    PETAL POSITIONS
 ========================= */
@@ -559,62 +498,50 @@ body {
     --rotation: 0deg;
     --delay: 5.2s;
 }
-
 .petal:nth-child(2) {
     --rotation: 30deg;
     --delay: 5.35s;
 }
-
 .petal:nth-child(3) {
     --rotation: 60deg;
     --delay: 5.5s;
 }
-
 .petal:nth-child(4) {
     --rotation: 90deg;
     --delay: 5.65s;
 }
-
 .petal:nth-child(5) {
     --rotation: 120deg;
     --delay: 5.8s;
 }
-
 .petal:nth-child(6) {
     --rotation: 150deg;
     --delay: 5.95s;
 }
-
 .petal:nth-child(7) {
     --rotation: 180deg;
     --delay: 6.1s;
 }
-
 .petal:nth-child(8) {
     --rotation: 210deg;
     --delay: 6.25s;
 }
-
 .petal:nth-child(9) {
     --rotation: 240deg;
     --delay: 6.4s;
 }
-
 .petal:nth-child(10) {
     --rotation: 270deg;
     --delay: 6.55s;
 }
-
 .petal:nth-child(11) {
     --rotation: 300deg;
     --delay: 6.7s;
 }
-
 .petal:nth-child(12) {
     --rotation: 330deg;
     --delay: 6.85s;
 }
-
 /* INNER PETALS */
 .petal:nth-child(13) {
     --rotation: 15deg;
@@ -622,42 +549,36 @@ body {
     width: 48px;
     height: 105px;
 }
-
 .petal:nth-child(14) {
     --rotation: 75deg;
     --delay: 6.25s;
     width: 48px;
     height: 105px;
 }
-
 .petal:nth-child(15) {
     --rotation: 135deg;
     --delay: 6.4s;
     width: 48px;
     height: 105px;
 }
-
 .petal:nth-child(16) {
     --rotation: 195deg;
     --delay: 6.55s;
     width: 48px;
     height: 105px;
 }
-
 .petal:nth-child(17) {
     --rotation: 255deg;
     --delay: 6.7s;
     width: 48px;
     height: 105px;
 }
-
 .petal:nth-child(18) {
     --rotation: 315deg;
     --delay: 6.85s;
     width: 48px;
     height: 105px;
 }
-
 /* =========================
    PETAL BLOOM
 ========================= */
@@ -669,7 +590,6 @@ body {
             rotate(var(--rotation))
             scale(0);
     }
-
     50% {
         opacity: 1;
         transform:
@@ -677,7 +597,6 @@ body {
             rotate(var(--rotation))
             scale(1.12);
     }
-
     100% {
         opacity: 1;
         transform:
@@ -686,7 +605,6 @@ body {
             scale(1);
     }
 }
-
 /* =========================
    CENTER
 ========================= */
@@ -721,33 +639,28 @@ body {
         ease-in-out
         11s infinite;
 }
-
 @keyframes centerAppear {
     from {
         transform:
             translate(-50%, -50%)
             scale(0);
     }
-
     to {
         transform:
             translate(-50%, -50%)
             scale(1);
     }
 }
-
 @keyframes centerPulse {
     0%, 100% {
         box-shadow:
             0 7px 15px rgba(80,40,0,0.35);
     }
-
     50% {
         box-shadow:
             0 7px 30px rgba(120,70,0,0.55);
     }
 }
-
 /* =========================
    FACE OF MIHO SUNFLOWER MWEHEHEH
 ========================= */
@@ -755,7 +668,6 @@ body {
     position: absolute;
     inset: 0;
 }
-
 .eye {
     position: absolute;
     width: 9px;
@@ -765,25 +677,20 @@ body {
     top: 38px;
     animation: blink 4s infinite;
 }
-
 .eye.left {
     left: 32px;
 }
-
 .eye.right {
     right: 32px;
 }
-
 @keyframes blink {
     0%, 90%, 100% {
         transform: scaleY(1);
     }
-
     94% {
         transform: scaleY(0.1);
     }
 }
-
 .smile {
     position: absolute;
     width: 30px;
@@ -794,7 +701,6 @@ body {
     top: 52px;
     transform: translateX(-50%);
 }
-
 /* =========================
    CHEEKS MWHEEHEHE
 ========================= */
@@ -807,15 +713,12 @@ body {
     top: 57px;
     opacity: 0.8;
 }
-
 .cheek.left {
     left: 15px;
 }
-
 .cheek.right {
     right: 15px;
 }
-
 /* =========================
    GRASS
 ========================= */
@@ -861,7 +764,6 @@ body {
         );
     z-index: 5;
 }
-
 /* =========================
    PETALS LUTANG
 ========================= */
@@ -872,10 +774,8 @@ body {
     background: #ffd23d;
     border-radius: 100% 0 100% 0;
     opacity: 0.8;
-    pointer-events: none;
     animation: floatingPetal linear infinite;
 }
-
 @keyframes floatingPetal {
     0% {
         transform:
@@ -884,18 +784,15 @@ body {
             rotate(0deg);
         opacity: 0;
     }
-
     10% {
         opacity: 0.9;
     }
-
     50% {
         transform:
             translateY(50vh)
             translateX(60px)
             rotate(180deg);
     }
-
     100% {
         transform:
             translateY(-100px)
@@ -904,9 +801,8 @@ body {
         opacity: 0;
     }
 }
-
 /* =========================
-   BUTTON PARA S LOVE LETTER KO
+   BUTTON PARA S LOVE LETTER KO SA AKING LOVE
 ========================= */
 .letter-button {
     position: absolute;
@@ -922,25 +818,21 @@ body {
     font-size: 17px;
     font-weight: bold;
     cursor: pointer;
-    white-space: nowrap;
     box-shadow:
         0 7px 0 #5d3900,
         0 12px 25px rgba(80, 45, 0, 0.25);
     transition: 0.2s;
 }
-
 .letter-button:hover {
     transform:
         translateX(-50%)
         scale(1.08);
 }
-
 .letter-button:active {
     transform:
         translateX(-50%)
         translateY(4px);
 }
-
 /* =========================
    LETTER OVERLAY
 ========================= */
@@ -957,17 +849,14 @@ body {
     visibility: hidden;
     transition: 0.4s ease;
 }
-
 .letter-overlay.show {
     opacity: 1;
     visibility: visible;
 }
-
 .letter {
     position: relative;
     width: min(700px, 95vw);
     max-height: 85vh;
-    max-height: 85dvh;
     overflow-y: auto;
     background:
         linear-gradient(
@@ -985,27 +874,23 @@ body {
         transform 0.5s
         cubic-bezier(.2,.8,.3,1.3);
 }
-
 .letter-overlay.show .letter {
     transform:
         scale(1)
         rotate(0deg);
 }
-
 .letter h3 {
     text-align: center;
     color: #825000;
     font-size: 28px;
     margin-bottom: 25px;
 }
-
 .letter p {
     color: #4d3920;
     font-size: 17px;
     line-height: 1.8;
     white-space: pre-line;
 }
-
 /* =========================
    CLOSE BUTTON
 ========================= */
@@ -1023,13 +908,11 @@ body {
     cursor: pointer;
     transition: 0.2s;
 }
-
 .close-button:hover {
     transform:
         rotate(90deg)
         scale(1.1);
 }
-
 /* =========================
    MUSIC
 ========================= */
@@ -1049,7 +932,6 @@ body {
     box-shadow:
         0 5px 20px rgba(80,50,0,0.15);
 }
-
 .music-icon {
     animation:
         musicBounce
@@ -1057,20 +939,15 @@ body {
         ease-in-out
         infinite alternate;
 }
-
 @keyframes musicBounce {
     from {
         transform: translateY(0);
     }
-
     to {
         transform: translateY(-5px);
     }
 }
 
-/* =========================
-   MOBILE RESPONSIVE
-========================= */
 @media (max-width: 600px) {
     .sun {
         width: 80px;
@@ -1078,68 +955,63 @@ body {
         top: 10%;
         right: 8%;
     }
-
     .top-message {
         top: 15px;
         padding: 12px 15px;
     }
-
     .top-message h2 {
         font-size: 15px;
     }
-
     .sunflower-area {
         transform:
             translateX(-50%)
             scale(0.72);
         bottom: -50px;
     }
-
     .music-box {
         left: 15px;
         bottom: 85px;
         font-size: 13px;
     }
-
     .letter-button {
         bottom: 25px;
         padding: 13px 23px;
         font-size: 15px;
     }
-
     .letter {
         padding: 30px 22px;
     }
-
     .letter h3 {
         font-size: 23px;
     }
-
     .letter p {
         font-size: 15px;
         line-height: 1.7;
     }
 }
+
+.song-title {
+    font-weight: 900 !important;
+    color: #704300;
+}
 </style>
 </head>
-
 <body>
 <div class="page">
 
-    <!-- =========================
+<!-- =========================
          BACKGROUND
-    ========================= -->
+========================= -->
     <div class="sun"></div>
     <div class="cloud cloud1"></div>
     <div class="cloud cloud2"></div>
 
-    <!-- =========================
+<!-- =========================
          START SCREEN
-    ========================= -->
+========================= -->
     <div
         class="start-screen"
         id="startScreen">
-
         <h1>
             PornHub
         </h1>
@@ -1149,12 +1021,11 @@ body {
             id="startButton">
             CLICK TO WATCH
         </button>
-
     </div>
 
-    <!-- =========================
+<!-- =========================
          MAIN CONTENT
-    ========================= -->
+========================= -->
     <div
         class="main-content"
         id="mainContent">
@@ -1170,9 +1041,9 @@ body {
             </h2>
         </div>
 
-        <!-- =========================
-             SUNFLOWER
-        ========================= -->
+<!-- =========================
+         SUNFLOWER
+========================= -->
         <div class="sunflower-area">
 
             <div class="stem"></div>
@@ -1194,7 +1065,6 @@ body {
                 <div class="petal"></div>
                 <div class="petal"></div>
 
-                <!-- INNER PETALS -->
                 <div class="petal"></div>
                 <div class="petal"></div>
                 <div class="petal"></div>
@@ -1202,9 +1072,7 @@ body {
                 <div class="petal"></div>
                 <div class="petal"></div>
 
-                <!-- FLOWER CENTER -->
                 <div class="flower-center">
-
                     <div class="face">
                         <div class="eye left"></div>
                         <div class="eye right"></div>
@@ -1212,53 +1080,48 @@ body {
                         <div class="cheek right"></div>
                         <div class="smile"></div>
                     </div>
-
                 </div>
             </div>
         </div>
 
-        <!-- =========================
-             GRASS
-        ========================= -->
+<!-- =========================
+         GRASS
+========================= -->
         <div class="grass"></div>
 
-        <!-- =========================
-             MUSIC PANG ASSURANCE
-        ========================= -->
+<!-- =========================
+         MUSIC PANG ASSURANCE
+========================= -->
         <div class="music-box">
             <span class="music-icon">
                 🎵
             </span>
-
             <span>
                 14 - Silent Sanctuary
             </span>
         </div>
 
-        <!-- =========================
-             LETTER KAY LUMIJOJOJO
-        ========================= -->
+<!-- =========================
+         LETTER KAY LUMIJOJOJO
+========================= -->
         <button
             class="letter-button"
             id="letterButton">
             CLICK TO UNLOCK 😛
         </button>
-
     </div>
 
-    <!-- =========================
-         LOVE LETTER OVERLAY
-    ========================= -->
+<!-- =========================
+         LOVE LETTER
+========================= -->
     <div
         class="letter-overlay"
         id="letterOverlay">
-
         <div class="letter">
 
             <button
                 class="close-button"
-                id="closeButton"
-                aria-label="Close letter">
+                id="closeButton">
                 ×
             </button>
 
@@ -1270,7 +1133,7 @@ body {
 
             <br>
 
-            <p>I no longer want to be with him, and I don’t want my past to make you question what I feel for you now. What happened before you is already in the past, and I’m choosing to move forward. I want you to know that what I have with you is something I genuinely value, and I want to build something meaningful with you without letting my past get in the way.</p>
+            <p>I no longer want to be with him, and I don’t want my past to make you question what I feel for you now. What happened before you is already in the past, and I’m choosing to move forward. I want you to know that what I have with you is something I genuinely value, and I want to build something meaningful with you without letting my past get in the way. </p>
 
             <br>
 
@@ -1283,9 +1146,9 @@ body {
         </div>
     </div>
 
-    <!-- =========================
+<!-- =========================
          ASSURANCE FUCKING SONG
-    ========================= -->
+========================= -->
     <audio
         id="song"
         preload="auto">
@@ -1296,8 +1159,11 @@ body {
 
 </div>
 
-
+<!-- =========================
+         CONNECT JAVASCRIPT
+========================= -->
 <script src="secret.js"></script>
 
 </body>
 </html>
+
